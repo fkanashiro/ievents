@@ -1,0 +1,34 @@
+Cidades json
+	nome Text
+	deriving Show
+
+EventosCategorias
+	descricao Text
+	deriving Show
+
+Usuarios json
+	email       Text
+	password    Text
+	nome        Text
+	UniqueEmail email
+	deriving Show
+
+Eventos json
+    nome           Text
+    descricao      Text
+    inicio         Day
+    termino        Day
+    endereco_nome   Text
+    endereco_num    Text
+    endereco_compl  Text Maybe
+    preco          Double
+    eventocategoriaid   EventosCategoriasId
+    cidadeid       CidadesId
+    userowner      UsuariosId
+    deriving Show
+
+UsuariosInteracoes json
+	usuarioid       UsuariosId
+	eventoid        EventosId
+	interacaotipoid Int
+	deriving Show
